@@ -1,15 +1,15 @@
 # CS547Project
-first run the following command to download data
+1.first run the following command to download data
 
 ```bash
 bash ./datasets/download_cyclegan_dataset.sh horse2zebra
 ```
 
-then go to *train_model.pbs*, modify the following line
-```bash
-aprun -n 1 -N 1 python train.py --dataroot ./datasets/horse2zebra --name horses_cyclegan --model cycle_gan --ngf 64 --ndf 64 --netG resnet9_blocks --init_type orthogonal --batch_size 1 --lr 0.0002 --lr_policy step --lambda_A 10 --lambda_B 10
-```
+2. modify horse_script.pbs line 10 to correct local address 
 
+3. submit horst_script to BW
+
+The following are parameters you can adjust when training`
 
 | parameter name     | meaning                                                          | possible value                                                      |
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------------------|
